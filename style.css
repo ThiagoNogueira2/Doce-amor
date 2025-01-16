@@ -1,0 +1,180 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FDE2F3; /* Fundo rosa claro */
+  color: #333333;
+}
+
+/* Container geral */
+.container {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('imagens/nutellinha.jpg'); /* Imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Garantir que a imagem de fundo fique atrás do conteúdo */
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(121, 111, 113, 0.5); /* Overlay rosa suave */
+  z-index: 0; /* Overlay rosa por trás da imagem */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2; /* Conteúdo do texto vai ficar na frente do overlay */
+}
+
+.title {
+  font-size: 4rem;
+  color: #1a1202; /* Rosa vibrante */
+  font-family: 'Dancing Script', cursive; /* Fonte mais delicada e cursiva */
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: #635059; /* Rosa suave */
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.05em;
+}
+
+/* Menu Section */
+.menu {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: #fff; /* Fundo branco para contraste */
+}
+
+.menu-title {
+  font-size: 2.5rem;
+  color: #FF69B4; /* Rosa mais forte */
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Card de produto */
+.card {
+  background-color: #FDE2F3; /* Rosa suave e delicado */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Efeito hover */
+}
+
+.card-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 1.7rem;
+  color: #FF69B4; /* Rosa intenso */
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-price {
+  font-size: 1.2rem;
+  color: #FF69B4;
+  font-weight: bold;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #F8B0C5; /* Rosa suave */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2rem;
+  color: #fdfdfd;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.contact-details p {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons {
+  margin-top: 2rem;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #FF69B4;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #FF1493; /* Rosa escuro */
+}
+
+/* Adicionando animação nas cartas */
+@keyframes cardHover {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.05);
+  }
+}
+
+.card:hover {
+  animation: cardHover 0.3s forwards;
+}
